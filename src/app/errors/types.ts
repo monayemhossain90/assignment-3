@@ -1,0 +1,32 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
+export type TErrorResponse = {
+    statusCode: number;
+    success?: boolean;
+    message?: string;
+    errorMessage?: string;
+    errorDetails?: {
+      issues?: TErrorIssue[];
+      name?: string;
+      stringValue?: string;
+      valueType?: string;
+      kind?: string;
+      value?: string;
+      reason?: any;
+      stack?: string;
+      path?: string;
+      message?: string;
+      errorCode?: string;
+    };
+    stack?: string;
+  };
+  
+  export type TErrorIssue = {
+    expected?: string;
+    received?: string;
+    code?: string;
+    path?: string;
+    message?: string;
+    errorMessage?: string;
+  };
+  
